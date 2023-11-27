@@ -34,8 +34,8 @@ window.addEventListener('load', function () {
 });
 
 
+/* Scroll Y Remis à 0 après chaque clique sur les liens du menu */
 const mes_sections = document.querySelectorAll('li')
-
 
 mes_sections.forEach(element => {
     {
