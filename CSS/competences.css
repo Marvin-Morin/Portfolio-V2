@@ -1,0 +1,45 @@
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(215, 215, 215);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+#competences_section {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 100px;
+  width: 80vw;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
+#competences_section img {
+  width: 10vw;
+}
+
+@media (max-width: 768px) {
+  #competences_section {
+    flex-direction: column;
+    padding: 150px 0;
+  }
+
+  #competences_section img {
+    width: 30%;
+  }
+}

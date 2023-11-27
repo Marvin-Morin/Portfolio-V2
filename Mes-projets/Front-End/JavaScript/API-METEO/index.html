@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - 7 - Afficher les donées dans le HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Découvrez la météo de votre ville :</h1>
+    <fieldset>
+        <legend> Ma Ville : </legend>
+        <form action="" name="mavilleform" method="get">
+            <!--Le for du label doit corespondre à l'ID de l'input-->
+            <label for="ville" id="titreInput">Entrer une ville :</label>
+            <input type="text" name="ville" id="ville" value="">
+            <input type="submit" value="Chercher">
+        </form>
+    </fieldset>
+    
+    
+    <div id="meteo">
+        <img id="ciel" src="" alt="">
+        <p> <strong>Ville :</strong>
+            <span id="truc"></span>
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Ciel :</strong>
+            <span id="resume"></span>
+        </p>
+        <br>
+
+        <p>
+            <strong>Temps :</strong>
+            <span id="temps"></span>
+        </p>
+        <br>
+
+        <p>
+            <strong>Temps ressentis :</strong>
+            <span id="tempsressentis"></span>
+        </p>
+        <br>
+
+        <p>
+            <strong>Temps minimum :</strong>
+            <span id="temp_min"></span>
+        </p>
+        <br>
+
+        <p>
+            <strong>Temps maximum :</strong>
+            <span id="temp_max"></span>
+        </p>
+        <br>
+
+        <p>
+            <strong>Vitesse du vent :</strong>
+            <span id="vent"></span>
+        </p>
+
+    </div>
+
+    <footer>
+        <p>API de <a href="https://openweathermap.org/api">openweathermap</a></p>
+    </footer>
+
+</body>
+<script src="main.js"></script>
+</html>

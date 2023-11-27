@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div id="container">
+
+    <!--     NAV     -->
+
+    <nav>
+
+      <div id="Logo">
+
+        <img src="./images/logo.svg" alt="">
+
+      </div>
+
+
+
+
+      <!--     LIENS NAV     -->
+      <div class="menu__burger"><span>toggle</span></div>
+
+      <section id="liens">
+
+
+        <ul id="listevisible">
+
+          <li id="feature" href="">Feature <img id="flechefeature" src="./images/icon-arrow-down.svg" alt="">
+
+            <ul id="sousmenufeature">
+
+              <div id="imagefeature">
+                <img src="images/icon-todo.svg" alt="">
+                <img src="images/icon-calendar.svg" alt="">
+                <img src="images/icon-reminders.svg" alt="">
+                <img src="images/icon-planning.svg" alt="">
+              </div>
+
+              <div id="sousfeature">
+
+                <li> Todo List</li>
+                <li> Calendar</li>
+                <li> Reminders</li>
+                <li> Planning</li>
+
+              </div>
+
+            </ul>
+          </li>
+          <li href="" id="compagny">Compagny <img id="flechecompagny" src="./images/icon-arrow-down.svg" alt="">
+            <ul id="souscompagny">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li href="">Careers</li>
+          <li href="">About
+          <li>
+        </ul>
+        
+        <div id="log">
+          
+          <a id="login" href="">Login</a>
+          <a id="register" href="">Register</a>
+          
+        </div>
+      </section>
+    </nav>
+
+
+    <div id="moncontenu">
+
+      <div id="gauche">
+
+        <div id="elementgauche">
+          <h1>Make <br> remote work</h1>
+          <p>Get your team in sync, no matter your location.<br>
+             Streamline processes, 
+            create team rituals, and <br>
+             watch productivity soar.</p>
+
+            <button>Learn more</button>
+
+            <div id="partenaires">
+              <img src="./images/client-audiophile.svg" alt="">
+              <img src="./images/client-databiz.svg" alt="">
+              <img src="./images/client-meet.svg" alt="">
+              <img src="./images/client-maker.svg" alt="">
+            </div>
+        </div>
+
+      </div>
+
+      <div id="droite">
+        <div id="elementdroit">
+          <img id="imgdroite" src="images/image-hero-desktop.png" alt="">
+        </div>
+      </div>
+    </div>
+
+
+    <!--
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more -->
+
+    <div id="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

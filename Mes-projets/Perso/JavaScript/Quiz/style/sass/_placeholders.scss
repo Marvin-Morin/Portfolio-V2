@@ -1,0 +1,11 @@
+/*Les éléments ne Se répete dans le css (mets des virgules pour chaques elements possédent
+le même*/
+
+/* @extend */
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+
+    <link rel="stylesheet" href="styler.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+
+    <br><br>
+
+    <!-- Pour faire un cadre aurour des éléments du formulaire-->
+    <fieldset>
+
+        <legend>Mon formulaire</legend> <!-- Pour afficher un titre au formulaire dans la bordure du lieldset-->
+
+        <form action="" name="monformulaire" method="GET" action="">
+            <h5 id="prenom"></h5>
+            <label for="prenom">Prénom : * </label> <input type="text" placeholder="Entrez votre prénom" id="prenom" name="prenom"> <br><br>
+
+            <h5 id="nom"></h5>
+            <label for="nom">Nom : * </label> <input type="text" placeholder="Entrez votre nom" id="nom" name="nom">
+            
+            <br><br>
+
+            <h5 id="mail"></h5>
+            <label for="mail">Adresse mail : * </label><input type="text" placeholder="Entrez votre adresse mail" id="mail" name="mail"> <br><br>
+
+            <h5 id="password"></h5>
+            <label for="password">Mot de passe : * </label><input type="password" placeholder="Entrez votre mot de passe" id="password" name="password"> <br><br>
+
+            <input type="submit" value="Envoyer" name="submit">
+        </form>
+
+    </fieldset>
+
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #303030;
+  color: whitesmoke;
+}
+
+/*SCORE*/
+#resultat {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+}
+
+#scoreActuel {
+  margin-left: 2vh;
+}
+
+#niveaux {
+  position: absolute;
+  top: 10%;
+}
+
+/*BOX*/
+#box {
+  position: relative;
+  height: 50vh;
+  width: 50vw;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#start {
+  background-color: rgb(16, 124, 16);
+  height: 10vh;
+  width: 10vw;
+  border-top-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#start::after {
+  content: "START";
+  font-weight: bold;
+}
+
+.exit {
+  background-color: rgba(16, 72, 124, 0);
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+}
+.exit::after {
+  content: "Exit";
+  font-weight: bold;
+}
+.exit:hover {
+  background-color: rgb(16, 72, 124);
+  color: inherit;
+}
+
+div {
+  width: 10vw;
+  height: 10vh;
+  background-color: rgba(0, 128, 0, 0);
+}
+div:hover {
+  background-color: rgb(0, 128, 0);
+}
+div.red {
+  background-color: rgba(255, 0, 0, 0);
+}
+div.red:hover {
+  background-color: red;
+}
+
+/*NIVEAUX*/
+.niveau {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+#un {
+  animation: animNiveauSup 2s linear;
+  position: absolute;
+  display: flex;
+}
+
+#deux {
+  animation: animNiveauSup 2s linear;
+  position: absolute;
+  display: none;
+}
+
+#trois {
+  animation: animNiveauSup 2s linear;
+  position: absolute;
+  display: none;
+}
+
+@keyframes animNiveauSup {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.animNiveauBack {
+  animation: animNiveauBack 1s linear;
+}
+
+@keyframes animNiveauBack {
+  to {
+    transform: translateY(-100%);
+    display: none;
+  }
+  from {
+    transform: translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,876 @@
+/*  RESET   */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif !important;
+    font-weight: 100;
+}
+
+
+
+/*  INSTALLATION DE LA POLICE   */
+
+@font-face {
+    font-family: 'merienda_oneregular';
+    src: url('Font-family/MeriendaOne-Regular.ttf');
+}
+
+
+
+/*   TOUS LES LIENS   */
+
+a {
+    text-transform: none;
+    text-decoration: none;
+}
+
+
+
+body {
+    /* background-color: #C6A989 !important; */
+    background-image: url(/image/photo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+
+/*     Personnailisation de la barre de scroll     */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+
+::-webkit-scrollbar-track {
+    background-color: #C6A989;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #0e4c63;
+    border-radius: 9px 30px 30px 9px;
+}
+
+
+
+/* La première page (ACCUEIL) */
+
+.Home {
+    width: 100vw;
+    max-height: 100vh;
+    color: #0E4D63;
+}
+
+
+
+/*  NAV   */
+
+
+/*   LE LOGO A GAUCHE DE NOTRE MENU   */
+
+nav #Logo img {
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+/*   TOUTE LA NAVIGATION DU MENU   */
+
+nav {
+    width: 100vw;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c6a789;
+    position: fixed;
+    z-index: 5;
+    box-shadow: 0 0 15px black;
+}
+
+
+
+/*   TOUS LES LIENS DE NOTRE MENU NAVIGATION   */
+
+nav a {
+    color: #0E4D63;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0%, 0%);
+    font-size: calc(0.5em + 0.5vw);
+    cursor: pointer;
+    font-family: 'merienda_oneregular';
+    transition: .3s ease-out;
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    color: #000000;
+    text-shadow: 0 0 7px #00000048;
+    display: flex;
+}
+
+
+
+/*   LA PETITE BARRE EN DESSUS DE CHAQUE LIENS DANS NOTRE MENU DE NOTRE NAVIGATION   */
+
+nav a::after {
+    content: "";
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    transform: scale(0);
+    border-radius: 15px;
+    transition: transform .3s ease-in-out;
+    margin-top: 5px;
+}
+
+
+
+/*   LE DECLENCHEMENT DE NOTRE BARRE AU MOMENT DU SURVOL DE LA SOURIS   */
+
+nav a:hover::after {
+    transform: scale(1);
+}
+
+
+
+/* Mes liens du menu */
+
+nav #Liens {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+
+/*   ACCUEIL   */
+
+
+
+/*   Première Image TEBALE CHAISE De l'Accueil   */
+
+#imgHome {
+    position: relative;
+    background-image: url('image/photo1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    transform: translateY(5%)
+}
+
+
+
+/*  Section présentation (partie bleu)  */
+
+
+/*   Ma section qui va afficher la partie en bleu, le paraggraphe et l'image   */
+
+#Bienvenue {
+    position: absolute;
+    width: calc(23vw + 1rem);
+    height: 100%;
+    background-color: #0E4D63;
+    border-radius: 0 110px 0 0 !important;
+    opacity: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*   Ma section qui va afficher le paraggraphe Dans la section presentation (partie bleu)   */
+
+#Bienvenue p {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 5em;
+    font-size: calc(1em + 0.1em);
+    color: #C6A989;
+    font-family: 'merienda_oneregular';
+    font-weight: 100;
+    height: 100%;
+    z-index: 2;
+    word-wrap: break-word;
+    padding: 0 10px;
+}
+
+
+
+/*   Ma section qui va afficher La photo de Monsieur Couillon   */
+
+#Bienvenue img {
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;
+    margin-top: auto;
+    margin-bottom: 50px;
+    width: calc(2em + 10em);
+}
+
+
+
+/*   DEUXIEME PAGE   */
+
+
+/*   ARRIERE PLAN DE LA PARTIE MENU GALETTE  */
+
+#DeuxiemePage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    width: 100vw;
+    background-image: url('image/fond-texture-bleu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 4;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+
+/*   SECTION MENU   */
+
+
+/*   La partie bleu qui affiche notre H2 " MENU "   */
+
+#Menu {
+    margin-top: -32px;
+    height: 70px;
+    width: 270px;
+    background-color: #0E4D63;
+    border-radius: 5px 150px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.726) inset;
+}
+
+
+
+/*   H2 : MENU   */
+
+#Menu h2 {
+    text-align: center;
+    color: #C6A989;
+}
+
+
+/*   CARTE   */
+
+
+.Carte {
+    width: 90%;
+    height: max-content;
+    padding: 0 20px 20px 20px;
+    background-image: radial-gradient(circle, #ffffff, #cbcdd7, #939eb0, #58738a, #0e4c63);
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px black;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+
+
+
+/*   CARTE TITRE GALETTE ET LOGO EN HAUT   */
+
+.Carte .Titre {
+    display: flex;
+    min-width: 100%;
+    height: 70px;
+    text-align: center;
+    color: #0e4c63;
+    font-weight: 100;
+    font-size: 1.5em;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/*   CARTE TITRE GALETTE EN HAUT   */
+
+.Titre h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+
+/*   LOGO CREPERIE HAUT A DROITE   */
+
+.Carte img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: -20px;
+}
+
+
+/*   LES DEUX PAGES GAUCHE ET DROITE   */
+
+.pagesMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    word-wrap: break-word;
+    margin-bottom: auto;
+    justify-content: space-between;
+}
+
+
+/*   PARAGRAPHE DU MENU GAUCHE   */
+
+.PageGauche p {
+    font-size: calc(1em - 0.2em);
+    margin-left: 15px;
+}
+
+
+/*   PARAGRAPHE DU MENU DROITE   */
+
+.PageDroite p {
+    font-size: calc(1em - 0.2em);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+
+/*   TITRE GALETTE 1,2,3,4,5,6,7,8,9,10   */
+
+.TitreGalette {
+    color: #C6A989;
+    background-color: #0e4c63;
+    padding: 5px 20px;
+    border-radius: 0 50px 0 50px;
+    font-weight: 100;
+    min-width: max-content;
+    font-size: calc(1em - 0.1em);
+}
+
+
+
+.PageGauche {
+    min-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    word-wrap: break-word;
+}
+
+
+.PageDroite {
+    min-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    word-wrap: break-word;
+}
+
+
+/*   TroixiemePage CREPE   */
+
+
+#TroixiemePage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    width: 100vw;
+    background-image: url('image/fond-texture-bleu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 50px auto;
+    margin-bottom: 20px;
+}
+
+
+/*   QuatriemePage HORAIRE   */
+
+
+#QuatriemePage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    width: 100vw;
+    background-image: url('image/fond-texture-bleu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+/*   Horaire rectangle   */
+
+
+#Horaire {
+    width: max-content;
+    height: max-content;
+    background-image: radial-gradient(circle, #ffffff, #cbcdd7, #939eb0, #58738a, #0e4c63);
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+
+/*   JOUR DE LA SEMAINE   */
+
+#Horaire h6 {
+    color: #C6A989;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 200;
+    background-color: #0e4c63d9;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.593);
+    width: max-content;
+    margin: 5px auto;
+    padding: 5px 20px;
+    border-radius: 0px 50px 0px 50px;
+}
+
+
+/*   HORAIRE D'OUVERTURE   */
+
+#Horaire p {
+    font-weight: 100;
+    font-size: calc(0.8em + 0.1em);
+    text-align: center;
+}
+
+
+/*   Presentation Alexendre dreCouillon   */
+
+
+#PresentationAlexendredreCouillon {
+    display: flex;
+    width: 100vw;
+    height: max-content;
+    background-image: url(/image/photo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+    position: relative;
+}
+
+
+.FiltreBackground {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.488);
+}
+
+
+#GaucheImageAlexendreCouillon {
+    padding: 0 20px;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#GaucheImageAlexendreCouillon img {
+    width: 15em;
+    margin: 20px auto;
+    height: auto;
+    box-shadow: 0 0 20px black;
+}
+
+
+#GaucheImageAlexendreCouillon h1 {
+    font-size: 1em;
+}
+
+
+/*   TEXTE PRESENTATION   */
+
+#DroiteImageAlexendreCouillon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 30px;
+    line-height: calc(1.4em + 0.5em);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    text-align: left;
+    font-weight: 100;
+    word-wrap: break-word;
+    font-size: calc(1.2em - 0.1em);
+}
+
+
+#DroiteImageAlexendreCouillon p {
+    font-size: calc(0.3em + 0.8em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*   SECTION BACKGROUND Equipe, Nos Engagements & NosPartenaires   */
+
+
+#Equipe,
+#NosEngagements,
+#NosPartenaires {
+    width: 100vw;
+    height: max-content;
+    background-image: url(/image/decors-fond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+
+
+/*   SECTION Equipe   */
+
+
+#Equipe {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+#TexteEquipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 100em;
+    flex-direction: column;
+    margin: 50px;
+}
+
+
+#TexteEquipe h4 {
+    text-align: center;
+    color: #0e4c63;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+#TexteEquipe p {
+    text-align: center;
+    color: #000000;
+    font-weight: 100;
+    text-align: justify;
+    line-height: 2em;
+    font-size: calc(0.2em + 0.8em);
+    width: auto;
+}
+
+
+#NosEngagements {
+    transform: rotateX(180deg);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#NosEngagementsTexte {
+    transform: rotateX(180deg) !important;
+    width: 100em;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#NosEngagementsTexte h4 {
+    color: #0e4c63;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+#NosEngagements ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+#NosEngagements li {
+    line-height: 3em;
+}
+
+
+/*   Nos Partenaires   */
+
+
+#NosPartenaires {
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+
+.Partenaire.Haut {
+    width: 30vw;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.Partenaire.Bas {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 30vw;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+#NosParenaireH5 {
+    display: flex;
+    justify-content: center;
+    color: #0e4c63;
+    font-weight: 700;
+}
+
+
+/*   Section Footer   */
+
+
+#Footer {
+    background-image: url(/image/fond-texture-bleu.jpg);
+    height: max-content;
+    width: 100vw;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 0 0 10px #000000;
+}
+
+
+#FiltreBackgroundFooter {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px #c6a789 inset;
+}
+
+
+#MenuFooter {
+    width: 100vw;
+    display: flex;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 0 10px #c6a789 inset;
+}
+
+
+/*   CONTACT   */
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+
+#MenuFooter img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+
+#MenuFooter a {
+    text-transform: none;
+    text-decoration: none;
+    color: #0e4c63;
+    font-weight: 500;
+    zoom: 100%;
+    transition: 0.3s;
+}
+
+
+#MenuFooter a:hover {
+    zoom: 110%;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+
+#Footer p {
+    top: 90%;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    font-family: serif;
+    margin-top: 50px;
+}
+
+
+/*   Contact   */
+
+
+#Contact {
+    height: max-content;
+    width: 100vw;
+    background-image: url(/image/fond-texture-bleu.jpg);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#ButtonContact
+
+{
+    cursor: pointer;
+}
+
+
+#InputContact {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    padding: 20px;
+}
+
+
+#InputContact p {
+    color: #0e4c63;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    font-family: 'merienda_oneregular';
+    text-transform: uppercase;
+}
+
+
+#Contact .row {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+
+#Contact .col {
+    margin: auto 20px;
+}
+
+
+label {
+    color: #0e4c63;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.475);
+}
+
+
+input
+
+{
+    background-color: #ffffff;
+    color: #c6a789;
+    font-size: .5em;
+    font-weight: 100;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #c6a789;
+}
+
+
+
+#Message {
+    min-height: 10px;
+    background-color: #ffffff;
+    color: #c6a789;
+    font-size: .8em;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #c6a789;
+    font-weight: 100;
+}
+
+
+#Submit
+
+{
+    margin-top: 20px;
+    border-radius: 0 50px 0 50px;
+    background-color: #0e4c63;
+    color: #c6a789;
+    width: max-content;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    transition: .3s;
+}
+
+
+#Submit:hover
+
+ {
+    zoom: 110%;
+    background-color: #c6a789;
+    color: #0e4c63;
+    transition: .3s;
+ }

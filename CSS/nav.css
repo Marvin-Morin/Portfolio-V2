@@ -1,0 +1,252 @@
+
+/* KEYFRAMES */
+
+@keyframes opacity {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes scale_titre {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+
+/********* NAV *********/
+nav {
+    height: 80px;
+    width: 100vw;
+    z-index: 5;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-image: linear-gradient(to right bottom, #00496e, #293352, #2a2133, #1d131a, #000000);
+}
+
+nav h4 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: x-large;
+    text-shadow: 3px 3px 5px black;
+    transform: scale(1);
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+
+#liens_menu {
+    padding: 0px 30px;
+}
+
+#liens_menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+
+nav #liens_menu ul li {
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+nav #liens_menu ul li::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 105%;
+    display: block;
+    transform-origin: center;
+    transform: scale(0);
+    transition: .3s all ease-in;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav #liens_menu ul li:hover::after {
+    content: "";
+    transform: scale(1);
+    transition: .3s all ease-out;
+}
+
+
+
+/* MENU RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* NAV */
+
+    nav {
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav h4 {
+        animation: scale_titre .3s;
+        margin: auto auto;
+    }
+
+    nav #liens_menu ul {
+        flex-direction: column;
+        margin: 20px auto 0px auto;
+    }
+
+    nav #liens_menu ul li {
+        font-size: 1.7em;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav #liens_menu ul li::after {
+        content: "";
+        display: none;
+    }
+
+
+    #liens_menu {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        max-height: 50%;
+        flex-direction: column;
+        transform: scale(1.3);
+    }
+
+
+    /***** *****/
+
+    /* CROIX MENU */
+
+    /* --- Définit la zone cliquable --- */
+    .menu-icon {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        margin: auto 10px auto auto;
+        right: 0px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    /* --- création et positionnement de la barre centrale --- */
+    .menu-icon span {
+        position: absolute;
+        top: 50%;
+        /* positionne la barre dans le cercle */
+        left: 50%;
+        /* positionne la barre dans le cercle */
+
+        display: block;
+        width: 22px;
+        /* largeur de la barre span */
+        height: 2px;
+        /* hauteur de la barre span */
+
+        background-color: #FFF;
+        transform: translateX(-50%) translateY(-50%);
+        /* centre la barre */
+    }
+
+    /* --- Barre supérieur et inférieur --- */
+    .menu-icon span::before,
+    .menu-icon span::after {
+        content: '';
+        /* contenu vide pour que l'element soit visible */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 22px;
+        /* largeur de la barre */
+        height: 2px;
+        /* hauteur de la barre */
+
+        background-color: #FFF;
+
+        transform: translateY(-6px);
+        /* fait monter de 6px la barre before par rapport à la barre centrale */
+        transition: transform 0.5s;
+    }
+
+    .menu-icon span::after {
+        transform: translateY(6px);
+        /* fait descendre de 6px la barre after par rapport à la barre centrale */
+    }
+
+    /* --- Animation au survol --- */
+    .menu-icon:hover span::before {
+        transform: translateY(-8px);
+        /* fait monter de 8px au survol */
+    }
+
+    .menu-icon:hover span::after {
+        transform: translateY(8px);
+        /* fait baisser de 8px au survol */
+    }
+
+    /* transformation en croix */
+    .menu-icon.cross.is-opened span {
+        background: transparent;
+        /* fait disparaitre la barre du milieu */
+        transition: background 0.5s, transform 0.5s;
+        /*  disparition douce */
+    }
+
+    .menu-icon.cross span::before,
+    span::after {
+        transform-origin: 50% 50%;
+    }
+
+    /* transformation par le centre du trait*/
+    .menu-icon.cross.is-opened span::before {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    /* rotation de la barre du haut */
+    .menu-icon.cross.is-opened span::after {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    /* rotation de la barre du bas */
+
+    /* ------------------------------------------------------ */
+    /* ------------------------------------------------------ */
+
+
+    .nav-toggle {
+        display: none;
+    }
+
+    /* masque l'input */
+
+    /* --- création et positionnement de la barre centrale --- */
+
+    .nav__btn-label {
+        position: absolute;
+        top: 25;
+        left: 25;
+        margin-left: 1em;
+        height: 10px;
+
+    }
+
+    /****** *****/
+}
+
+/********* *********/

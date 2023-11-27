@@ -1,0 +1,464 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: none;
+    text-decoration: none;
+}
+
+#attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+nav {
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+#liens {
+    width: 60%;
+}
+
+#liens ul#listevisible {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#liens ul#listevisible li {
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+
+#liens ul#listevisible li:hover {
+    opacity: 1;
+}
+
+#log {
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+#log a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+
+#log a:hover {
+    opacity: 1;
+}
+
+#register {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#compagny,
+#feature {
+    position: relative;
+}
+
+#souscompagny {
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    display: none;
+}
+
+#souscompagny li,
+#sousmenufeature li {
+    margin: 5px;
+}
+
+#imageFeature {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#sousmenufeature {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    display: none;
+    margin-left: -50px !important;
+}
+
+#imagefeature {
+    display: flex;
+    flex-direction: column;
+}
+
+#imagefeature img {
+    margin: 10px 5px;
+}
+
+#sousfeature li {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 5px;
+}
+
+#sousfeature {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Contenu */
+
+
+
+#moncontenu {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    width: 100vw;
+}
+
+#gauche {
+    grid-column: 1/2;
+    width: 50vw;
+    height: 80vh;
+    padding-left: 5vw;
+}
+
+#elementgauche {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#elementgauche h1 {
+    font-size: 8vw;
+}
+
+#elementgauche p {
+    margin-top: 50px;
+    font-size: 1.2vw;
+    opacity: .7;
+}
+
+#elementgauche button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    transition: .3s all ease-out;
+    cursor: pointer;
+}
+
+#elementgauche button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#partenaires {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+#partenaires img {
+    margin: auto 10px;
+    width: 8vh;
+}
+
+
+/* Droite */
+
+#droite {
+    grid-column: 2/2;
+    width: 50vw;
+    position: relative;
+    height: 80vh;
+}
+
+#elementdroit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#elementdroit img {
+    max-height: 100%;
+    max-width: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu__burger {
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    #continer {
+        overflow: hidden;
+    }
+
+    .menu__burger {
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        position: relative;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        overflow: hidden;
+        font-size: 0;
+        z-index: 10;
+    }
+
+    .menu__burger span {
+        position: absolute;
+        display: block;
+        background-color: #000;
+        height: 4px;
+        width: 30px;
+        top: 18px;
+        left: 5px;
+        right: 5px;
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+
+    .menu__burger span::after,
+    .menu__burger span::before {
+        position: absolute;
+        display: block;
+        height: 4px;
+        background-color: #000;
+        content: '';
+        width: 100%;
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+
+    .menu__burger span::after {
+        top: -10px;
+    }
+
+    .menu__burger span::before {
+        bottom: -10px;
+    }
+
+    .menu__burger.close span {
+        background-color: transparent;
+        transition: 0.5s;
+    }
+
+    .menu__burger.close span::after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+
+    .menu__burger.close span::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+    }
+
+    @keyframes animationburger {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes animationburgerfermeture {
+        from {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    .animationburger {
+        animation-name: animationburger;
+        animation-duration: .3s;
+    }
+
+    .animationburgerfermeture {
+        animation-name: animationburgerfermeture;
+        animation-duration: .3s;
+    }
+
+
+    #liens,
+    #listevisible {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #fff;
+        z-index: 5;
+    }
+
+    #liens {
+        height: 100vh;
+        width: 80vw;
+        right: 0;
+        top: 0;
+        display: none;
+        box-shadow: -10px 0 200px black;
+    }
+
+    #listevisible {
+        margin: 50px;
+    }
+
+    #listevisible li {
+        margin: 10px 0;
+    }
+
+    #log {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+    }
+
+    #log a {
+        margin: 10px auto;
+    }
+
+    #sousmenufeature {
+        z-index: 20;
+        display: none;
+        margin-left: 0 !important;
+        position: relative;
+        box-shadow: none;
+    }
+
+
+    #sousfeature {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #souscompagny {
+        position: relative;
+        box-shadow: none;
+        margin-left: 20px;
+    }
+
+    li {
+        opacity: 1 !important;
+    }
+
+    #moncontenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        width: 100vw;
+        position: relative;
+    }
+
+    #droite {
+        order: 1;
+        width: 100vw !important;
+        position: relative;
+        height: max-content;
+    }
+
+    #elementdroite {
+        width: 100% !important;
+        position: none !important;
+    }
+
+    #elementdroit img {
+        max-width: 100% !important;
+    }
+
+    #gauche {
+        order: 2;
+        width: 90vw;
+        height: max-content;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    #elementgauche {
+        width: 100%;
+        align-items: center;
+    }
+
+    #elementgauche p {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    #attribution {
+        display: none;
+    }
+
+    #partenaires {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

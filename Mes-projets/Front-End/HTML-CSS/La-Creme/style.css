@@ -1,0 +1,652 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/*  TYPO  */
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+hr {
+    display: none;
+}
+
+/*  FLECHE TOP  */
+
+#flechetop {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    padding: 5px;
+    background-color: #12769B;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+/*  NAV  */
+
+#flechemenunav {
+    display: none;
+}
+
+nav {
+    width: 100vw;
+    height: max-content;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.588);
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    z-index: 10;
+}
+
+.liens {
+    margin-right: 40px;
+}
+
+.liens a {
+    margin-left: 30px;
+    color: black !important;
+}
+
+a:visited {
+    text-decoration: none;
+    text-transform: none;
+    color: inherit;
+}
+
+/*  ACCEUIL  */
+
+/*  IMAGE BACKGROUND  */
+
+#Accueil {
+    background-image: url(image/decors-fond.jpg);
+    min-height: 90vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+/*  Contenu Accueil  */
+
+#ContenuAccueil {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ContenuAccueil img {
+    width: 400px;
+}
+
+
+#Accueil a {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    background-color: #C6A989;
+    padding: 20px;
+    color: white;
+    border-radius: 50px;
+}
+
+#ContenuAccueil a img {
+    width: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/*  Presentation Equipe  */
+
+#PresentationEquipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+#TextPresentationEquipe {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50vw;
+    height: max-content;
+}
+
+#TextPresentationEquipe h5 {
+    font-size: large;
+    margin-bottom: 20px;
+    line-height: calc(0.9em + 0.1vw);
+    font-size: calc(0.5rem + 0.5vw);
+    margin-left: 30px;
+}
+
+#TextPresentationEquipe p {
+    line-height: calc(0.5rem + 1.5vw);
+    font-size: calc(0.4rem + 0.5vw);
+    text-align: justify;
+    z-index: 2;
+    overflow-wrap: break-word;
+    position: relative;
+    margin: 0 25px;
+}
+
+#PhotoAlexendreCouillon {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    width: max-content;
+    height: max-content;
+}
+
+#PhotoAlexendreCouillon img {
+    max-width: auto;
+    height: max-content;
+    height: max-content;
+    z-index: 2;
+    margin-right: 30px;
+    top: 100%;
+}
+
+.FondMoche {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 60%;
+    width: 100% !important;
+    padding: 0;
+}
+
+/*  SECTION NOTRE CREPERIE  */
+
+#PresentationEquipe .row {
+    width: 100%;
+}
+
+
+#notrecreperie {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 47px;
+}
+
+#notrecreperie img {
+    justify-content: flex-start;
+    width: calc(27rem + 15vw);
+    height: max-content;
+}
+
+img#brushbleu {
+    position: absolute;
+    right: 0;
+    bottom: -47px;
+    width: 30vh;
+}
+
+#presentationnotrecreperie {
+    justify-content: flex-end;
+    text-align: justify;
+    font-size: calc(0.3rem + 0.5vw);
+    height: max-content;
+    line-height: calc(0.1rem + 2vw);
+    margin: auto 60px auto 20px;
+}
+
+#presentationnotrecreperie p {
+    margin-bottom: 0 !important;
+}
+
+#presentationnotrecreperie h5 {
+    font-size: large;
+    line-height: calc(0.9em + 0.1vw);
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+/*  SECTION gallerie  */
+
+#gallerie {
+    width: 100vw;
+    height: max-content;
+}
+
+#premiererangeedestroispremiereimage img {
+    width: calc(30rem - 40vw);
+    padding: 0;
+    height: auto;
+    margin: 0 !important;
+}
+
+#DeuxièmeRangeeDesTroisPremieresImages img {
+    max-width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#PremiereImageDeuxiemeRangee {
+    width: calc(1rem + 40vw);
+}
+
+#DeuxiemeImageDeuxiemeRangee {
+    width: calc(0.5rem + 29vw);
+}
+
+#TroxiemeImageDeuxiemeRangee {
+    width: calc(0.2rem + 30vw);
+}
+
+/*  Notre Carte  */
+
+#notrecarte {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 40px 0 10px;
+    font-size: calc(0.3rem + 0.5vw);
+}
+
+#titrenotrecarte h5 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    margin: 40px 0 40px 20px;
+    text-transform: uppercase;
+}
+
+#crepes {
+    width: 50vw;
+    padding: 0 20px;
+}
+
+#crepes h6 {
+    font-weight: bold;
+}
+
+#galettes {
+    justify-content: flex-end;
+}
+
+/*  reservation  */
+
+#reservation {
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    margin: 30px auto 0 auto;
+    padding: 0 50px;
+    position: relative;
+}
+
+#PartieGauchereservation {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+}
+
+#PartieGauchereservation h1 {
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 3vw;
+}
+
+#horaire {
+    font-size: calc(0.3rem + 0.5vw);
+    margin-bottom: 50px;
+}
+
+#horaire h5 {
+    font-weight: bold;
+}
+
+#ousommesnous {
+    font-size: calc(0.3rem + 0.5vw);
+    margin-bottom: 40vh;
+}
+
+#ousemmesnous h5 {
+    font-weight: bold;
+}
+
+#partiedroitereservation {
+    width: clamp(400px, 4em, 80px);
+    height: clamp(500px, 4em, 80px);
+    background-color: #D9D9D9;
+    justify-content: flex-end;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+#bruchbleureservation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40vh;
+}
+
+/*  FOOTER  */
+
+Footer {
+    background-color: #C6A989;
+    height: max-content;
+}
+
+Footer p {
+    color: white;
+    padding: 20px;
+    font-size: calc(0.3rem + 0.5vw);
+    margin-bottom: 0 !important;
+}
+
+/*   MEDIA QUERY  */
+
+@media (max-width: 915px) {
+
+    #flechetop {
+        display: none;
+    }
+
+    #ContenuAccueil a {
+        display: none;
+    }
+    
+
+    html {
+        overflow-x: hidden !important;
+    }
+
+    nav {
+        background-color: rgb(255, 255, 255);
+        box-shadow: none;
+        left: 0;
+        display: flex;
+        width: 100vw;
+        height: 5vh;
+        position: static !important;
+    }
+
+    img#flechemenunav {
+        position: absolute;
+        left: 0;
+        top: 1%;
+        z-index: 100;
+    }
+
+
+@keyframes menuburgeranimation {
+    to {
+        opacity : 1;
+    }
+
+    from {
+        opacity : 0;
+    }
+}
+
+
+@keyframes menuburgeranimationclose {
+    to {
+        opacity : 0;
+    }
+
+    from {
+        opacity : 1;
+    }
+}
+
+
+    .liens {
+        background:#D9D9D9;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .liens a {
+        position: relative;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+ 
+
+
+    #flechemenunav {
+        display: flex;
+        width: 30px;
+        margin-right: auto;
+        left: 0;
+        z-index: 110;
+        margin-left: 20px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    #PresentationEquipe {
+        display: flex;
+        height: max-content !important;
+        overflow: visible;
+        margin: 20px auto;
+    }
+
+    #PresentationEquipe .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #PhotoAlexendreCouillon {
+        top: 0;
+        order: 2;
+        width: 100vw;
+        display: flex;
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    #PhotoAlexendreCouillon img {
+        margin: 0;
+        width: 100%;
+    }
+
+    #TextPresentationEquipe {
+        order: 1;
+        width: 100vw;
+        margin: 20px auto;
+    }
+
+    .FondMoche {
+        display: none;
+    }
+
+    #TextPresentationEquipe h5, #notrecreperie h5 {
+        font-weight: bold;
+        font-size: 3vh !important;
+    }
+
+    #TextPresentationEquipe p,   #notrecreperie p {
+        font-size: 2vh !important;
+        line-height: 3vh;
+        font-weight: 600;
+        padding: 0 10px;
+        margin: 0 !important;
+    }
+
+    #notrecreperie {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        height: max-content;
+    }
+
+    #notrecreperie img {
+        width: 100vw;
+        margin: auto 20px;
+    }
+
+    #brushbleu {
+        display: none;
+    }
+
+    #presentationnotrecreperie {
+        margin: 20px !important;
+    }
+
+    #ContenuAccueil img {
+        width: 300px;
+        border-radius: 50%;
+    }
+
+    #premiererangeedestroispremiereimage img {
+        width: calc(12rem - 40vw);
+    }
+
+    #notrecarte {
+        height: max-content;
+        margin: auto;
+        padding: 20px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column !important;
+        padding: 0 !important;
+        font-size: calc(1rem + 0.5vw);
+    }
+
+    #crepes,
+    #galettes {
+        width: 100vw !important;
+        text-align: left;
+        margin: 0 20px !important;
+        padding: 0 20px !important;
+    }
+
+    #crepes p,
+    #galettes p {
+        margin : 5px 0 10px 0 !important;
+    }
+
+    #galettes {
+        margin-top: 50px;
+    }
+
+    #galettes h6,
+    #crepes h6 {
+        text-align: left;
+        margin-top: 10px;
+        font-weight: 1000;
+    }
+
+    #galettes h6 {
+        margin: 40px 0;
+    }
+
+    #hr {
+        width: 90vw;
+        height: 1vw;
+        background-color: #C6A989;
+        font-weight: 1000;
+        margin : 30px auto auto auto;
+        display: block;
+        border: none;
+    }
+
+    #reservation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #PartieGauchereservation {
+        justify-content: center;
+        width: max-content;
+    }
+
+    #PartieGauchereservation h1 {
+        font-size: 5vw;
+    }
+
+    #horaire {
+        margin: 50px auto;
+        font-size: calc(0.8rem + 0.5vw);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #horaire h5, #ousommesnous h5 {
+        font-weight: bold;
+    }
+
+    #ousommesnous {
+        margin: 50px auto;
+        font-size: calc(0.8rem + 0.5vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #partiedroitereservation {
+        width: 100vw;
+        height: 40vh;
+        margin: 0 0 20px 0 !important;
+    }
+
+    #bruchbleureservation {
+        display: none;
+    }
+
+
+}

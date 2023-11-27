@@ -1,0 +1,31 @@
+{
+    "contacts":[
+        {
+            "prenom":"Marvin",
+            "nom":"Morin",
+            "tel":"0600000000",
+            "mail":"marvin.m@institutsolacroup.com",
+            "entreprise":"Institut Solacroup",
+            "fonction":"Stagiaire",
+            "commentaire":""
+        },
+        {
+            "prenom":"Anthony",
+            "nom":"Lamidon",
+            "tel":"0610000000",
+            "mail":"anthony.l@institutsolacroup.com",
+            "entreprise":"Institut Solacroup",
+            "fonction":"Stagiaire",
+            "commentaire":""
+        },
+        {
+            "prenom":"Alexandre",
+            "nom":"Buet",
+            "tel":"0620000000",
+            "mail":"alexandre.b@institutsolacroup.com",
+            "entreprise":"Institut Solacroup",
+            "fonction":"Stagiaire",
+            "commentaire":""
+        }
+    ]
+}

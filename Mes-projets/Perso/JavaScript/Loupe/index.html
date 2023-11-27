@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="CSS/style.css">
+     <title>Document</title>
+ </head>
+ <body>
+
+    <!-- <figure id="magnifyng_area">
+        <img id="magnifyng_img" src="./img/bac/bac 1.png" alt="">
+    </figure> -->
+
+    <div id="loupe"></div>
+
+    <script>
+    zoom=2;
+    document.body.onmousemove=function(){
+    loupe=document.getElementById("loupe");
+    loupe.style.left=event.clientX+"px";
+    loupe.style.top=event.clientY+"px";
+    loupe.style.backgroundSize=(1500*zoom)+"px";
+    loupe.style.backgroundPosition=(-loupe.offsetLeft*zoom-150)+"px "+(-loupe.offsetTop*zoom-150)+"px"
+}
+    </script>
+     
+    <!-- <script src="JS/main.js" ></script> -->
+ </body>
+ </html>

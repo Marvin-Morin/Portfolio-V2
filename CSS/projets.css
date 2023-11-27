@@ -1,0 +1,125 @@
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(215, 215, 215);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
+
+/* ANNIMATION MODALE */
+@keyframes animation_modale {
+    from{transform: translate(-100%, -50%);}
+    to{transform: translate(-50%, -50%);}
+}
+
+
+#img_section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 80vw;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+#img_section .imageprojet {
+    position: relative;
+    width: 15vw;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #000000;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.modale {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-image: linear-gradient(to right bottom, #00496e, #293352, #2a2133, #1d131a, #000000);
+    border-radius: 10px;
+    z-index: 5;
+    color: white;
+}
+
+.modale img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.open {
+    display: flex;
+    animation: animation_modale .3s ease-in;
+}
+
+.close {
+    display: none;
+}
+
+.modale a {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: .3s all ease-in;
+    transform: scale(1);
+}
+
+.modale a:hover {
+    transition: .3s all ease-out;
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.605);
+}
+
+
+@media (max-width: 768px) {
+
+    .modale {
+        position: fixed;
+        height: auto;
+    }
+
+    .modale p {
+        text-align: center;
+        margin: 50px auto 10px auto;
+    }
+
+    #img_section {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 120px 0px 100px 0px;
+    }
+
+    #img_section .imageprojet {
+        width: 50%;
+        height: auto;
+    }
+}

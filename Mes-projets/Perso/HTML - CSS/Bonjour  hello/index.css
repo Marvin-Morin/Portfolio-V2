@@ -1,0 +1,54 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3a424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+span {
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .1em;
+    text-shadow: 
+    0 0 1px #000000,
+    0 2px 2px #000000,
+    1px 1px 3px rgb(0, 0, 0),
+    2px 2px 4px #000000,
+    3px 3px 5px #000000;
+    transform: rotate(-5deg);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span::before {
+    content: 'BONJOUR';
+}
+
+span::after {
+    content: 'HELLO !';
+    background-color: #ffffff;
+    color: #15008b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border-radius: 15px;
+    transform: scale(0);
+    transition: .3s all ease-out;
+    text-shadow: none;
+}
+
+span:hover::after {
+    transform: scale(1);
+}

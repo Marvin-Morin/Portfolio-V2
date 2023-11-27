@@ -1,0 +1,5 @@
+start && premier hover => boolean = true
+
+s'il sort du carrer noir => boolean = false.
+
+exit condition if boolean === true "code qui gère l'exit" sinon return

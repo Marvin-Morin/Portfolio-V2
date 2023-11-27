@@ -1,0 +1,120 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholders';
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: $couleur-primaire;
+    @extend %flex-center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#niveauettentative {
+    width: 50vw;
+    height: max-content;
+    border: 1px solid white;
+    @extend %flex-center;
+    border-radius: $border-radius-input;
+    margin: $margin-text;
+    color: $couleur-box;
+}
+
+#box {
+    background-color: $couleur-box;
+    width: $width-box;
+    height: $height-box;
+    border-radius: $border-radius-box;
+    position: $position-box;
+    @extend %flex-center;
+
+    #contenubox {
+        position: $position-contenu-box;
+        @extend %flex-center;
+        @include absolute-el(0, 0, 0, 50%, -50%, 0);
+    }
+
+    h5,
+    p,
+    input {
+        font-size: $font-size-input;
+        color: $couleur-primaire;
+        margin: $margin-text;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    #question {
+        text-align: center;
+    }
+
+    input {
+        border-radius: $border-radius-input;
+        padding: $padding-input;
+        border: $border-input;
+        box-shadow: $box-shadow-input;
+        background-color: $couleur-box;
+        color: $couleur-primaire;
+        transition: $transition-submit;
+    }
+
+    input[type=submit] {
+        cursor: pointer;
+
+        &:hover {
+            transform: $transform-hover-input-type-submit;
+            background-color: $couleur-primaire;
+            color: $couleur-box;
+        }
+    }
+
+}
+
+#fin {
+    width: 60vw;
+    height: 60vh;
+    background-color: #fff;
+    color: $couleur-primaire;
+    position: absolute;
+    border-radius: 15px;
+    color: $couleur-primaire;
+    display: none;
+    @extend %flex-center;
+
+    #buttonfin {
+        padding: $padding-input;
+        color: $couleur-primaire;
+        background-color: $couleur-box;
+        border: $border-input;
+        border-radius: $border-radius-input;
+        transition: .3s all ease-out;
+        cursor: pointer;
+        :hover {
+            background-color: $couleur-primaire;
+            color: $couleur-box;
+            transform: scale(1.2);
+        } 
+    }
+    p {
+        margin: $margin-text;
+        text-align: center;
+    }
+}
+
+
+@media (max-width : 700px ) {
+    #box {
+        width: 80vw;
+        height: 80vh;
+    }
+}

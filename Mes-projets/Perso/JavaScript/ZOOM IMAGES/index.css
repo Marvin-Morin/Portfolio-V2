@@ -1,0 +1,42 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    margin: 4rem 0.1rem;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    transition: 0.7s ease-in;
+}
+
+.picture:after {
+    content: '';
+    height: inherit;
+    width: inherit;
+    background: inherit;
+    position: absolute;
+    bottom: -100%;
+    transform: rotateX(180deg);
+    overflow: hidden;
+}
+
+.picture:before {
+    content: '';
+    height: inherit;
+    width: inherit;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1),#fff 100%);
+    position: absolute;
+    bottom: -100%;
+    z-index: 10;
+    overflow: hidden;
+
+}
+
+.picture:hover {
+    transform: scale(1.3);
+    z-index: 20;
+}

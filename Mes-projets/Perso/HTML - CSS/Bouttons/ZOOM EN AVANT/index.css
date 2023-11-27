@@ -1,0 +1,69 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px ;
+    text-align: center;
+}
+
+
+
+/* Non Optimiser pour la performance */
+
+
+/* Lien qui va être derriere notre span*/
+
+.animation-lien {
+
+    /* Display inline block pour que notre élément prenne bien toute la largeur et la hauteur du contenu*/
+    display: inline-block;
+    background: #000;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* Notre span */
+
+.animation-lien span {
+    display: inline-block;
+    background-color: yellow;
+    color: #000;
+    border : 1px solid black;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition:   transform 0.15s ease-out,
+    color 0.15s ease-out;
+    background-color: 0.15s ease-out;
+    ;
+}
+
+/* Ne pas mettre le hover sur span au risque de beugues lors du survol */
+
+.animation-lien:hover span {
+    transform: translate(-6px, -6px);
+    color: yellow;
+    background-color: #ff90e8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Optimiser pour la performance */
+
+
+/* On ne voit pas le code sur sa vidéo*/

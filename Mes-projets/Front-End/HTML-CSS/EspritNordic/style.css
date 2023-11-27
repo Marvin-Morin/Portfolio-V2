@@ -1,0 +1,131 @@
+*, ::after, ::before
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#Contenu #logo
+
+{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+#Contenu
+
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
+#FeedInstagram
+
+{
+    width: 100vw;
+    height: max-content;
+    background-color: #037806;
+    margin: auto;
+}
+
+#Footer
+
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: #037806;
+    margin-top: 5px;
+}
+
+
+.elfsight-app-d9258851-b5dc-4a3b-80f9-4187b9c23af7 img
+
+{
+    padding: 10px;
+    background-color: #037806;
+}
+
+.eapps-link {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+
+@media (max-width:800px) {
+
+    #logo {
+        margin-top: 15px;
+    }
+
+
+    img
+
+{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+    body 
+
+    {
+        background-color: #037806;
+    }
+
+
+    .elfsight-app-d9258851-b5dc-4a3b-80f9-4187b9c23af7 img
+
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+
+.eui-widget-title
+{
+    color: #ffffff;
+}
+
+
+#FeedInstagram
+
+{
+    width: 100vw;
+    background-color: #037806;
+}
+
+
+#Footer
+
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: #037806;
+    background-color: #fff;
+    margin-top: 10px;
+    width: 100vw;
+    padding: 10px;
+}
+
+
+    
+}

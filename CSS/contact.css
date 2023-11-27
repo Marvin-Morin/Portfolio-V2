@@ -1,0 +1,32 @@
+#contact_section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+#contact_section p {
+    text-align: center;
+}
+
+#contact_section a {
+    text-decoration: underline;
+    text-transform: none;
+    color: #00496e;
+}
+
+#contact_section img {
+    transition: .3s all ease-out;
+    transform: scale(1);
+}
+
+#contact_section img:hover {
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.596));
+    transition: .3s all ease-out;
+    transform: scale(1.2);
+}
+
+#contact_section a:hover {
+    color: #000000;
+}

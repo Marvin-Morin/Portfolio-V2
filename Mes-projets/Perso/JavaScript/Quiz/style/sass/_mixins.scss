@@ -1,0 +1,21 @@
+/*Les éléments se répete dans le css (mets l'élément individuellement pour chaques elements le possédent*/
+/*Utiliser des mixins seleument lorsu'on a des paramêtres sinon utiliser des placeholders*/
+
+@mixin absolute-el ($top, $right, $bottom, $left, $x, $y) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform: translate($x, $y);
+}
+
+/*Pseudo elelement (after / before)*/
+
+@mixin pseudo-el ($display: block, $position: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $position;
+}
+
+/*Transform*/

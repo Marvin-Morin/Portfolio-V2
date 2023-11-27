@@ -1,0 +1,71 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  /* padding: 2000px 0; */
+}
+
+h1 {
+    font-family: Roboto Flex, sans-serif;
+    font-size: clamp(30px, 8vw, 60px);
+    text-align: center;
+    padding: calc(50px + 1vmin) 10px calc(80px + 1vmin);
+}
+
+.documentation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex; 
+    padding: 0 30px;
+}
+nav {
+    align-self: flex-start;
+    margin-right: calc(30px + 1vmin);
+    position: sticky;
+    top: 20%;
+    border: 1px solid rgba(51,51,51,0.25);
+    border-radius: 8px;
+}
+nav a {
+    display: block;
+    position: relative;
+    color: #8d8d8d;
+    text-decoration: none;
+    font-size: 20px;
+    padding: calc(10px + 1vmin)  calc(30px + 1vmin);
+    font-weight: 500;
+    overflow: hidden;
+}
+nav a:nth-child(1) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+nav a:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+nav a.marked {
+    color: #333;
+    background: #eaeaea;
+}
+nav a.marked::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    top: 0;
+    right: 0;
+    background: #06aa06;
+}
+.content-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}

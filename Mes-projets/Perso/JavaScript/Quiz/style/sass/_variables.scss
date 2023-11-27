@@ -1,0 +1,25 @@
+/*Ici, les variables qui vont commencer avec un $ puis le nom 
+que l'on veut lui donner avec la valeurs*/
+
+/*Couleurs*/
+$couleur-primaire : #00496E;
+$couleur-box : #ffffff;
+/*BOX*/
+$width-box : 50%;
+$height-box : 50%;
+$border-radius-box : 15px;
+$position-box : relative;
+/*CONTENU BOX*/
+$position-contenu-box : absolute;
+/*input*/
+$border-radius-input : 10px;
+$border-input : 1px solid $couleur-primaire;
+$box-shadow-input : 0 0 5px $couleur-primaire;
+$font-size-input : 2.2vh;
+/*Input type SUBMIT*/
+$transition-submit : .3s all ease-out;
+/*&HOVER*/
+$transform-hover-input-type-submit : scale(1.2);
+/*Margin & Padding*/
+$margin-text : 2vh;
+$padding-input : 10px;

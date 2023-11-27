@@ -1,0 +1,160 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholders';
+
+
+@font-face {
+    font-family: 'Lexend-Deca';
+    ;
+    src: url(../font/LexendDeca-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Big-Shoulders-Display';
+    src: url(../font/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+
+
+body {
+    background-color: rgb(42, 42, 42);
+    height: 100vh;
+    width: 100vw;
+    @extend %flex-center;
+    overflow: hidden;
+}
+
+#tableau {
+
+    width: 60vw;
+    height: 60vh;
+    @extend %flex-center;
+}
+
+.box {
+    width: 20vw;
+    height: 50vh;
+    display: flex;
+    padding: $padding;
+
+    .contenubox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .text {
+        display: block;
+        margin: 0 auto 40px auto;
+
+        p {
+            font-family: Lexend-Deca;
+            font-size: $font-size-text;
+            color: $blanc;
+            opacity: .8;
+        }
+
+        h2 {
+            font-family: Big-Shoulders-Display;
+            font-size: $font-size-titre;
+            color: $blanc;
+            margin: 0 auto;
+        }
+
+    }
+
+
+    button {
+        padding: $padding-button;
+        border-radius: $border-radius;
+        border: 1px solid $blanc;
+        cursor: pointer;
+        transition: .3s all ease-out;
+
+        &:hover {
+            background-color: transparent;
+            color: $blanc !important;
+        }
+    }
+}
+
+#sedans {
+    background-color: $orange;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    button {
+        color: $orange;
+    }
+}
+
+#suvs {
+    background-color: $blue;
+
+    button {
+        color: $blue;
+    }
+}
+
+#luxury {
+    background-color: $bleu-vert;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    button {
+        color: $bleu-vert;
+    }
+}
+
+
+@media (max-width : 942px) {
+
+
+    body {
+        background-color: rgb(255, 255, 255);
+        height: 100% !important;
+        overflow: auto !important;
+        width: 100vw;
+        @extend %flex-center;
+    }
+
+
+    #tableau {
+
+        height: max-content;
+        width: 60vw;
+        @extend %flex-center;
+        flex-direction: column;
+    }
+
+
+    .box {
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        padding: $padding;
+    }
+
+    
+#sedans {
+    background-color: $orange;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: 0;
+}
+
+#luxury {
+    background-color: $bleu-vert;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.text p {
+    font-size: 2vh !important;
+}
+
+
+}

@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/*Ici, les variables qui vont commencer avec un $ puis le nom 
+que l'on veut lui donner avec la valeurs*/
+/*Couleurs*/
+/*BOX*/
+/*CONTENU BOX*/
+/*input*/
+/*Input type SUBMIT*/
+/*&HOVER*/
+/*Margin & Padding*/
+/*Les éléments se répete dans le css (mets l'élément individuellement pour chaques elements le possédent*/
+/*Utiliser des mixins seleument lorsu'on a des paramêtres sinon utiliser des placeholders*/
+/*Pseudo elelement (after / before)*/
+/*Transform*/
+/*Les éléments ne Se répete dans le css (mets des virgules pour chaques elements possédent
+le même*/
+/* @extend */
+#fin, #box #contenubox, #box, #niveauettentative, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #00496E;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#niveauettentative {
+  width: 50vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 2vh;
+  color: #ffffff;
+}
+
+#box {
+  background-color: #ffffff;
+  width: 50%;
+  height: 50%;
+  border-radius: 15px;
+  position: relative;
+}
+#box #contenubox {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#box h5,
+#box p,
+#box input {
+  font-size: 2.2vh;
+  color: #00496E;
+  margin: 2vh;
+}
+#box input {
+  width: 90%;
+}
+#box #question {
+  text-align: center;
+}
+#box input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #00496E;
+  box-shadow: 0 0 5px #00496E;
+  background-color: #ffffff;
+  color: #00496E;
+  transition: 0.3s all ease-out;
+}
+#box input[type=submit] {
+  cursor: pointer;
+}
+#box input[type=submit]:hover {
+  transform: scale(1.2);
+  background-color: #00496E;
+  color: #ffffff;
+}
+
+#fin {
+  width: 60vw;
+  height: 60vh;
+  background-color: #fff;
+  color: #00496E;
+  position: absolute;
+  border-radius: 15px;
+  color: #00496E;
+  display: none;
+}
+#fin #buttonfin {
+  padding: 10px;
+  color: #00496E;
+  background-color: #ffffff;
+  border: 1px solid #00496E;
+  border-radius: 10px;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+}
+#fin #buttonfin :hover {
+  background-color: #00496E;
+  color: #ffffff;
+  transform: scale(1.2);
+}
+#fin p {
+  margin: 2vh;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  #box {
+    width: 80vw;
+    height: 80vh;
+  }
+}/*# sourceMappingURL=style.css.map */

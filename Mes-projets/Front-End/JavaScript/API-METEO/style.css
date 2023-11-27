@@ -1,0 +1,151 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+body {
+    background-color: #00496E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+h1 {
+    margin: 50px;
+    text-align: center;
+}
+
+legend {
+    padding: 0 5px;
+    display: block;
+    margin: auto;
+}
+
+fieldset {
+    min-width: 70vw;
+    max-width: 80vw;
+    padding: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+input[type ='text'] {
+
+    padding: 5px;
+    border-radius: 5px;
+    color: #00496E;
+
+}
+input[type ='submit'] {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    margin-left: 5px;
+    transition: .3s all ease-out;
+    cursor: pointer;
+}
+
+input[type ='submit']:hover {
+    background-color: #fff;
+    color: #00496E;
+    transition: .3s all ease-out;
+}
+
+img {
+    width: 12vw;
+    margin: 10px;
+    animation: animmeteo 2s;
+    margin-top: auto;
+}
+
+#meteo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: animmeteo 5s;
+    height: max-content;
+    background-color: rgb(0, 0, 0);
+    padding: 50px;
+    line-height: 1.7em;
+    margin: 50px auto 50px auto;
+    border-radius: 10px;
+    min-width: 70vw;
+    max-width: 70vw;
+}
+
+#meteo p {
+    color: rgb(255, 255, 255) !important;
+}
+
+#meteo span {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+}
+
+@keyframes animmeteo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    width: 100vw;
+    background-color: #fff;
+    display: block;
+    margin-top: auto;
+}
+
+footer p, footer a {
+    color: #00496E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+@media (max-width : 540px) {
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    label#titreInput {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px !important;
+        align-items: center;
+    }
+
+    input[type = 'submit'] {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #meteo {
+        margin-top: 50px;
+        min-width: 90vw;
+        max-width: 90vw;
+    }
+}

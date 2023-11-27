@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon App JSON</title>
+</head>
+<body>
+        <select>
+            <option>Prépa</option>
+            <option>Front</option>
+            <option>Back</option>
+        </select>
+   <ul>
+   </ul>
+
+   <div id="form">
+    <form action=""  method='POST'>
+        <fieldset>
+            <legend> Ajouter un stagiaire</legend>
+            <label for="prenom">prenom :</label>   <input type="text" id="prenom" name="prenom"> </br>
+            <label for="nom">nom :</label>   <input type="text" id="nom" name="nom"> </br>
+            <label for="tel">tel :</label>   <input type="text" id="tel" name="tel"> </br>
+            <label for="mail">mail :</label>   <input type="text" id="mail" name="mail"> </br>
+            <label for="entreprise">entreprise :</label>   <input type="text" id="entreprise" name="entreprise"> </br>
+            <label for="fonction">fonction :</label>   <input type="text" id="fonction" name="fonction"> </br>
+            <label for="formation">formation :</label> </br>
+                <select name="formation" id="formation">
+                    <option value="prépa">prépa</option>
+                    <option value="front">front</option>
+                    <option value="back">back</option>
+                    <option value="CDA">CDA</option>
+                    <option id="ajouterContact" value=""></option>
+                </select>
+            </br></br></br>
+                <label for="commentaire">commentaire :</label> </br>
+                <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" id="ajout" name="ajout" value="ajouter un contact">
+        </fieldset>
+    </form>
+   </div>
+
+   <div id="details">
+   </div>
+
+   <button>Ajouter un stagiaire</button>
+</body>
+<script src="js/monjs.js"></script>
+</html>

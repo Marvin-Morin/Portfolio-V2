@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*Ici, les variables qui vont commencer avec un $ puis le nom 
+que l'on veut lui donner avec la valeurs*/
+/*Couleurs*/
+/*BOX*/
+/*Texte*/
+/*Titre*/
+/*Button*/
+/*Les éléments se répete dans le css (mets l'élément individuellement pour chaques elements le possédent*/
+/*Utiliser des mixins seleument lorsu'on a des paramêtres sinon utiliser des placeholders*/
+/* @include ... */
+/*Pseudo elelement (after / before)*/
+/*Transform*/
+/*Les éléments ne Se répete dans le css (mets des virgules pour chaques elements possédent
+le même*/
+/* @extend ... */
+#tableau, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Lexend-Deca";
+  src: url(../font/LexendDeca-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Big-Shoulders-Display";
+  src: url(../font/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+body {
+  background-color: rgb(42, 42, 42);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#tableau {
+  width: 60vw;
+  height: 60vh;
+}
+
+.box {
+  width: 20vw;
+  height: 50vh;
+  display: flex;
+  padding: 40px;
+}
+.box .contenubox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+.box .text {
+  display: block;
+  margin: 0 auto 40px auto;
+}
+.box .text p {
+  font-family: Lexend-Deca;
+  font-size: 1vw;
+  color: white;
+  opacity: 0.8;
+}
+.box .text h2 {
+  font-family: Big-Shoulders-Display;
+  font-size: 6vh;
+  color: white;
+  margin: 0 auto;
+}
+.box button {
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+.box button:hover {
+  background-color: transparent;
+  color: white !important;
+}
+
+#sedans {
+  background-color: hsl(31deg, 77%, 52%);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#sedans button {
+  color: hsl(31deg, 77%, 52%);
+}
+
+#suvs {
+  background-color: hsl(184deg, 100%, 22%);
+}
+#suvs button {
+  color: hsl(184deg, 100%, 22%);
+}
+
+#luxury {
+  background-color: hsl(179deg, 100%, 13%);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#luxury button {
+  color: hsl(179deg, 100%, 13%);
+}
+
+@media (max-width: 942px) {
+  body {
+    background-color: rgb(255, 255, 255);
+    height: 100% !important;
+    overflow: auto !important;
+    width: 100vw;
+  }
+  #tableau {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 60vw;
+    flex-direction: column;
+  }
+  .box {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    padding: 40px;
+  }
+  #sedans {
+    background-color: hsl(31deg, 77%, 52%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+  #luxury {
+    background-color: hsl(179deg, 100%, 13%);
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .text p {
+    font-size: 2vh !important;
+  }
+}/*# sourceMappingURL=style.css.map */

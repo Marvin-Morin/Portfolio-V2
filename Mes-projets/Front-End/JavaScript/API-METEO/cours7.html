@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Afficher les données dans le HTML</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <a id="topa" href="#"><img src="../icon/chevronblanc.png" alt="" id="top"></a>
+
+
+
+    <h1 class="titreprincipale">LES API</h1>
+
+    <section class="cours">
+
+        <h1 class="titreprincipale">7 - Afficher les données dans le HTML</h1><br><br>
+<p>- Copier tout le code HTML ET JavaScriptdu cours Numéro 6.</p>
+<br>
+<a href="/Cours 6 - Les objets/index.html" target="_blank" style="margin: auto;">Voir le cours Numéro 6</a>
+<br><br>
+<p>- Créez dans votre dossier HTML, des éléments de comment vous vouler montrer les informations :</p>
+<p>- Personnellement j'ai choisi de faire comme l'idée de Pierre :</p>
+<p>- Puis mettez des id pour pouvoir écrire vos informations à l'intérieur dans le JavaScriptgrace à " innertHTML ".</p>
+<img src="1.png" alt="">
+
+<p>- Vous allez modifier dans le JavaScriptdu cours numéro 6 dans notre fonction " recupererLaMeteoActeulleDeGeoLoc ", l'endroit où vous aller manipuler les informations / les données Json : </p>
+<img src="2.png" alt="">
+<p>- Vous allez modifier le deuxième then par : <br><br>
+     traiterData => montrerLaMeteoDeLapi(traiterData) | Qui fera référence à la fonction que l'on crée juste après.
+</p>
+<div class="code">
+<pre>
+
+fetch(myRequest)
+
+    .then(
+        transformEnJson => transformEnJson.json()
+    )
+
+    .then(
+        traiterData => montrerLaMeteoDeLapi(traiterData)
+    )
+
+    .catch(
+            error => console.log(error)
+    )
+};
+</pre>
+</div>
+
+<p>- " montrerLaMeteoDeLapi " fera référence à la fonction dans laquelle nous allons mettre nos données du Json dans les span de nos ID corespondant dans le HTML :</p>
+<br>
+<p>- Je crée la fonction montrerLaMeteoDeLapi qui qui traite le json du service de meteo de l'api currentweather :</p>
+
+<div class="code">
+<pre>
+
+const montrerLaMeteoDeLapi = (data) => {
+
+    // On cible la span ville pour afficher la propriétée name de json
+    const truc = document.querySelector('#truc');
+
+    // On ajoute la ville à l'intérieur
+    truc.innerHTML = data.name;
+
+
+    const resume = document.querySelector('#resume');
+    resume.innerHTML = data.weather[0].description;
+
+    const temps = document.querySelector('#temps');
+    temps.innerHTML = Math.trunc(data.main.temp) + '°C';
+
+    const tempsressentis = document.querySelector('#tempsressentis');
+    tempsressentis.innerHTML = Math.trunc(data.main.feels_like) + '°C';
+
+    const tempsminimum = document.querySelector('#temp_min');
+    tempsminimum.innerHTML = Math.trunc(data.main.temp_min) + '°C';
+
+    const temp_max = document.querySelector('#temp_max');
+    temp_max.innerHTML = Math.trunc(data.main.temp_max) + '°C';
+
+    const vent = document.querySelector('#vent');
+    vent.innerHTML = data.wind.speed + ' km/h';
+    
+    const ciel = document.querySelector('#ciel');
+    ciel.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        
+}
+
+</pre>
+</div>
+
+<p>- J'ai utilisé la fonction : " Math.trunc " pour enlever les décimales car, j'en avais envie.</p>
+<br><br>
+<a href="index.html"target="_blank" style="margin: auto;">Voir le talent de Mr Morin</a>
+
+<br><br><br>
+
+<div id="apiButton">
+    <a href="#" style="margin: auto;">1 - TRAITER UN FICHIER JSON</a>
+    <br>
+    <a href="../2-utiliser fetch pour récuper json/coursjs.html" style="margin: auto;">2-utiliser "fetch()" pour
+        récuper le json</a>
+    <br>
+    <a href="../3 - Construire une requête dynamique/index.html" style="margin: auto;">3 - Construire une
+        requête dynamique</a>
+    <br>
+    <a href="../4 - Faire l'appel de l'API dans une fonction/index.html" style="margin: auto;">4 - Faire l'appel
+        de l'API dans une fonction</a>
+    <br>
+    <a href="../5 - Récupérer la ville avec un formulaire/cours5.html" style="margin: auto;">5 - Récupérer la
+        ville avec un formulaire</a>
+    <br>
+    <a href="../6 - Appeler l'API Metéo/cours6.html" style="margin: auto;">6 - Appeler l'API Metéo</a>
+    <br>
+    <a href="#" style="margin: auto;">7 - Afficher les données
+        dans le HTML</a>
+</div>
+
+    </section>
+
+
+
+    <div class="button">
+        <a href="https://marvin.fronthub.fr/Javascript-cours-frontend/Javascript-Pierre-All%c3%a9e/Cour%201%20(Les%20variables)/">Cours JavaScript</a>
+    </div>
+    
+    <main>
+        <img src="../Cour 1 (Les variables)/2022-puppy-walk-animated.gif" alt="">
+    </main>
+
+
+</body>
+<script src="./js/script.js"></script>
+
+</html>
