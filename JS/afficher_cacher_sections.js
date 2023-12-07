@@ -70,6 +70,7 @@ function afficherSection(index) {
 /* APPLICATION DE LA FERMETURE AUTOMATIQUE DU MENU VERSION MOBILE  */
 function appliquerCodeSiPetiteFenetre() {
     if (window.innerWidth <= 768) {
+        // Votre code ici
         let liensMenu = document.querySelectorAll('li');
         liensMenu.forEach(function (lien) {
             lien.addEventListener('click', function () {
