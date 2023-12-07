@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    
     <!-- CSS -->
     <!-- GLOBALE -->
     <link rel="stylesheet" href="/CSS/globale.css">
@@ -18,24 +19,33 @@
     <link rel="stylesheet" href="/CSS/projets.css">
     <!-- CONTACT -->
     <link rel="stylesheet" href="/CSS/contact.css">
+    <!-------------------------------------------------->
+
     <!-- JS -->
     <script src="/JS/main.js" async></script>
     <!-- AFFICHER & CACHER SECTIONS -->
     <script src="/JS/afficher_cacher_sections.js" async></script>
     <!-- PROJET MODALE -->
     <script src="/JS/projets.js" async></script>
+    <!-- COMPETENCES -->
+    <script src="/JS/competences.js" async> </script>
+    <!-------------------------------------------------->
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-------------------------------------------------->
+
     <!-- Favicon -->
     <link rel="icon" href="/ressource/img/Marvin-Morin.png">
-
+    <!-------------------------------------------------->
 </head>
 
 <body>
 
+
+
     <nav>
         <h4>Profil</h4>
-        <!-- <img src="/ressource/img/Marvin-Morin.png" alt="Photo Marvin-Morin"> -->
         <!-- Croix menu responsive-->
         <div class="menu-icon cross">
             <span></span>
@@ -50,6 +60,10 @@
             </ul>
         </div>
     </nav>
+
+
+
+    <!-- SECTION PROFIL -->
 
     <section id="presentation_section" class="displayed hidden">
         <div id="photo_bio">
@@ -78,81 +92,133 @@
         </div>
     </section>
 
+
+
+    <!-- SECTION COMPETENCES -->
+
     <section id="competences_section" class="hidden">
-        <img src="/ressource/icons/html-5.png" alt="HTML">
-        <img src="/ressource/icons/css-3.png" alt="CSS">
-        <img src="/ressource/icons/sass.png" alt="SCSS">
-        <img src="/ressource/icons/script-java.png" alt="JavaScript">
-        <img src="/ressource/icons/typescript.png" alt="TypeScript">
-        <img src="/ressource/icons/LogoReact.png" alt="React">
-        <img src="/ressource/icons/wordpress.png" alt="Wordpress">
-        <img src="/ressource/icons/java.png" alt="Java">
-        <img src="/ressource/icons/Logo-SQL.png" alt="SQL">
-        <img src="/ressource/icons/MySQL.png" alt="MySQL">
-        <img src="/ressource/icons/Visual_Studio_Code_1.35_icon .png" alt="Visual Studio Code">
-        <img src="/ressource/icons/premiere-pro.png" alt="Logiciel de montage vidéo - Première pro">
+        <div id="competences_content">
+            <img src="/ressource/icons/html-5.png" alt="HTML">
+            <img src="/ressource/icons/css-3.png" alt="CSS">
+            <img src="/ressource/icons/sass.png" alt="SCSS">
+            <img src="/ressource/icons/script-java.png" alt="JavaScript">
+            <img src="/ressource/icons/typescript.png" alt="TypeScript">
+            <img src="/ressource/icons/LogoReact.png" alt="React">
+            <img src="/ressource/icons/wordpress.png" alt="Wordpress">
+            <img src="/ressource/icons/java.png" alt="Java">
+            <img src="/ressource/icons/Logo-SQL.png" alt="SQL">
+            <img src="/ressource/icons/MySQL.png" alt="MySQL">
+            <img src="/ressource/icons/mongodb-icon.svg" alt="MongoDB">
+            <img src="/ressource/icons/mongoose.webp" alt="Mongoose">
+            <img src="/ressource/icons/Visual_Studio_Code_1.35_icon .png" alt="Visual Studio Code">
+            <img src="/ressource/icons/premiere-pro.png" alt="Logiciel de montage vidéo - Première pro">
+        </div>
+        <div id="swipe_indicator" class="rotate-on-max" onclick="scrollCompetences()">Swipe<img
+                src="/ressource/icons/flecheDroite.png" alt="swipe"></div>
     </section>
+
+
+
+    <!-- SECTION PROJETS -->
 
     <section id="projets_section" class="hidden">
         <div id="img_section">
             <img class="imageprojet" id="img_api" src="/ressource/images_projets/API.png" alt="API METEO">
-            <img class="imageprojet" id="img_calculatrice" src="/ressource/images_projets/Calculatrice.png" alt="API Calculatrice">
-            <img class="imageprojet" id="img_frontendmentor" src="/ressource/images_projets/frontend-mentor-exercice.png"
-                alt="Front-end mentor - Exercice">
+            <img class="imageprojet" id="img_calculatrice" src="/ressource/images_projets/Calculatrice.png"
+                alt="API Calculatrice">
+            <img class="imageprojet" id="img_frontendmentor"
+                src="/ressource/images_projets/frontend-mentor-exercice.png" alt="Front-end mentor - Exercice">
             <img class="imageprojet" id="img_lacreme" src="/ressource/images_projets/La-Creme.png"
                 alt="Site la crème - Restaurent fictif">
             <img class="imageprojet" id="img_wordpress" src="/ressource/images_projets/wp-shop.png" alt="WP">
             <img class="imageprojet" id="img_quiz" src="/ressource/images_projets/Quiz.png" alt="Quiz projet perso">
         </div>
+
+        <div id="swipe_indicator_projets" class="rotate-on-max" onclick="scrollProjets()">Swipe<img id="swipe_arrow_img" src="/ressource/icons/flecheDroite.png" alt="swipe"></div>
+                
+
+
         <!-- MODALE -->
+
         <!-- MODALE API -->
+
         <div class="modale api close">
             <img src="/ressource/icons/croix.png" alt="fermer">
             <p>Apprendre à maitriser une API en manipulant un fichier Json.</p>
-            <a href="https://marvin.fronthub.fr/Mes-projets/Front-End/JavaScript/API-METEO/index.html">Voir le projet</a>
+            <a href="https://marvin.fronthub.fr/Mes-projets/Front-End/JavaScript/API-METEO/index.html">Voir le
+                projet</a>
         </div>
+
         <!-- MODALE CALCULATRICE -->
+
         <div class="modale calculatrice close">
             <img src="/ressource/icons/croix.png" alt="fermer">
             <p>Apprendre à maitriser l'algorithmie / les opérateurs en TypeScript.</p>
             <a href="https://marvin.fronthub.fr/Mes-projets/Perso/JavaScript/Calculatrice">Voir le projet</a>
         </div>
+
         <!-- MODALE FRONT-END MENTOR -->
+
         <div class="modale frontendmentor close">
             <img src="/ressource/icons/croix.png" alt="fermer">
-            <p>Une maquette du site "Front-end mentor que j'ai codé pour améliorer mes compétences en HTML / CSS et Javascript.</p>
+            <p>Une maquette du site "Front-end mentor que j'ai codé pour améliorer mes compétences en HTML / CSS et
+                Javascript.</p>
             <a href="https://marvin.fronthub.fr/Mes-projets/Front-End/HTML-CSS/Frontend-mentor/">Voir le projet</a>
         </div>
+
         <!-- MODALE LA CREME -->
+
         <div class="modale lacreme close">
             <img src="/ressource/icons/croix.png" alt="fermer">
             <p>Une maquette que j'ai intégré en cours de front.</p>
             <a href="https://marvin.fronthub.fr/Mes-projets/Front-End/HTML-CSS/La-Creme/">Voir le projet</a>
         </div>
+
         <!-- MODALE WORDPRESS -->
+
         <div class="modale wordpress close">
             <img src="/ressource/icons/croix.png" alt="fermer">
-            <p>Apprendre à maitriser le CMS Wordpress <br> ainsi que les extensions : <br><br> WooCommerce, Yoast SEO, SecuPress Free, UpdraftPlus,<br> WP-Optimize.</p>
+            <p>Apprendre à maitriser le CMS Wordpress <br> ainsi que les extensions : <br><br> WooCommerce, Yoast SEO,
+                SecuPress Free, UpdraftPlus,<br> WP-Optimize.</p>
             <a href="https://marvin.fronthub.fr/wp">Voir le projet</a>
         </div>
+
         <!-- MODALE quiz -->
+
         <div class="modale quiz close">
             <img src="/ressource/icons/croix.png" alt="fermer">
             <p>Apprendre l'algorithmie avec TypeScript.</p>
             <a href="https://marvin.fronthub.fr/Mes-projets/Perso/JavaScript/Quiz/">Voir le projet</a>
         </div>
+
     </section>
+
+
+
+    <!-- SECTION CONTACT -->
+
     <section id="contact_section" class="hidden">
-        <p>Vous pouvez me contacter par mail : <a href="mailto:marvin.malouin@gmail.com">marvin.malouin@gmail.com</a></p>
-        <p>Ou par téléphone au : <a href="tel:0612980932">06-12-98-09-32</a></p>
-        <a href="https://github.com/Marvin-Morin" target="_blank"><img src="/ressource/icons/github.png" alt="Github Marvin Morin"></a>
-        <a href="https://codepen.io/Marvin_2M" target="_blank"><img src="/ressource/icons/codepen.png" alt="Codepen Marvin Morin"></a>
-        <a href="https://www.linkedin.com/in/marvin-morin-5b15291b3/" target="_blank"><img src="/ressource/icons/linkedin.png" alt="Linkedin Marvin Morin"></a>
+        <p>Vous pouvez me contacter par mail : <br><a href="mailto:marvin.malouin@gmail.com">marvin.malouin@gmail.com</a>
+        </p>
+        <p>Ou par téléphone au : <br> <a href="tel:0612980932">06-12-98-09-32</a></p>
+
+        <div id="reseaux_section">
+            <a href="https://github.com/Marvin-Morin" target="_blank"><img src="/ressource/icons/github.png" alt="Github Marvin Morin"></a>
+            <a href="https://codepen.io/Marvin_2M" target="_blank"><img src="/ressource/icons/codepen.png" alt="Codepen Marvin Morin"></a>
+            <a href="https://www.linkedin.com/in/marvin-morin-5b15291b3/" target="_blank"><img src="/ressource/icons/linkedin.png" alt="Linkedin Marvin Morin"></a>
+        </div>
     </section>
+
+
+
+    <!-- SECTION FOOTER -->
+
     <footer>
         <p>Copiright® Marvin Morin - 2023</p>
     </footer>
 
+
+    
 </body>
 
 </html>
