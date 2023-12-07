@@ -1,68 +1,64 @@
 #presentation_section {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px auto;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    margin: 100px auto; /* Marge externe, centrée horizontalement */
 }
 
 #presentation_section h1 {
-    color: #00496e;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0px 40px;
-    margin: 0px auto 50px auto;
-    border-right: 1px solid #00496e;
-    border-left: 1px solid #00496e;
+    color: #000000; /* Couleur du texte en noir */
+    font-weight: 600; /* Épaisseur de la police */
+    border-radius: 5px; /* Coins arrondis */
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 0px 40px; /* Espacement intérieur gauche et droit */
+    margin: 0px auto 50px auto; /* Marge externe avec une marge inférieure plus grande */
+    border-right: 1px solid #000000; /* Bordure droite solide */
+    border-left: 1px solid #000000; /* Bordure gauche solide */
+    text-transform: uppercase; /* Convertit le texte en majuscules */
 }
 
-
 #photo_bio {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: flex; /* Affiche les éléments en ligne (par défaut) */
+    justify-content: space-evenly; /* Espace équitablement les éléments horizontalement */
+    align-items: center; /* Centre le contenu horizontalement */
 }
 
 #profil img {
-    width: 90%;
-    margin: 20px;
-    background-image: linear-gradient(to right bottom, #00496e, #293352, #2a2133, #1d131a, #000000);
-    border-radius: 50%;
+    width: 90%; /* Largeur de l'image à 90% du conteneur */
+    margin: 20px; /* Marge autour de l'image */
+    background-color: #000000;  /* Couleur de fond noire */
+    border-radius: 50%; /* Crée une forme de cercle avec des coins arrondis */
 }
 
-
 #bio {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 1.1em;
-    line-height: 30px;
+    width: 60%; /* Largeur du texte à 60% du conteneur parent */
+    display: flex; /* Affiche les éléments en ligne (par défaut) */
+    flex-direction: column; /* Affiche les éléments en colonne */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    height: 100%; /* Hauteur à 100% du conteneur parent */
+    font-size: 1.1em; /* Taille de la police */
+    line-height: 30px; /* Hauteur de ligne */
 }
 
 /* PRESENTATION RESPONSIVE */
 
-@media (max-width : 1393px) {
-
-
+@media (max-width: 1393px) {
     #photo_bio {
-        flex-direction: column;
+        flex-direction: column; /* Affiche les éléments en colonne lorsque la largeur maximale est atteinte */
     }
 
     #bio {
-        text-align: justify;
-        width: 80%;
-        min-height: auto;
-        overflow-y: scroll;
-        margin: 10px auto;
+        text-align: justify; /* Justifie le texte */
+        width: 80%; /* Réduit la largeur du texte à 80% du conteneur parent */
+        min-height: auto; /* Ajuste automatiquement la hauteur minimale */
+        overflow-y: scroll; /* Ajoute une barre de défilement vertical en cas de dépassement de la hauteur */
+        margin: 10px auto; /* Marge externe, centrée horizontalement */
     }
 }
 
-@media (max-width : 300px) {
-
-
+@media (max-width: 300px) {
     #bio {
-        text-align: center;
+        text-align: center; /* Centre le texte horizontalement lorsque la largeur maximale est atteinte */
     }
 }

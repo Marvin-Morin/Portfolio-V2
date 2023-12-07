@@ -1,45 +1,96 @@
+/* Styles pour la personnalisation de la barre de défilement */
+
 ::-webkit-scrollbar {
-  height: 5px;
+  height: 8px; /* Hauteur de la barre de défilement */
+  margin: 20px; /* Marge extérieure de la barre de défilement */
+  width: 100%; /* Largeur de la barre de défilement */
 }
 
-/* Track */
+/* Track (piste) de la barre de défilement */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #000; /* Couleur de fond de la piste de la barre de défilement */
+  border-radius: 50px; /* Bordure arrondie de la piste */
+  margin: 150px; /* Marge extérieure de la piste */
 }
 
-/* Handle */
+/* Handle (poignée) de la barre de défilement */
 ::-webkit-scrollbar-thumb {
-  background: rgb(215, 215, 215);
-  border-radius: 50px;
+  background: #00496e; /* Couleur de la poignée de la barre de défilement */
+  border-radius: 50px; /* Bordure arrondie de la poignée */
 }
 
-/* Handle on hover */
+/* Style de la poignée au survol */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
+  background: #EDCC2E; /* Couleur de la poignée au survol */
 }
 
+
+
+/* Styles pour la section des compétences */
 #competences_section {
+  position: relative; 
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 100vw; /* Largeur de la section des compétences */
+}
+
+#competences_content {
+  position: relative;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
-  padding: 100px;
-  width: 80vw;
-  scroll-behavior: smooth;
-  overflow-x: scroll;
+  gap: 50px; /* Espacement entre les éléments de la section */
+  padding: 100px; /* Rembourrage intérieur de la section */
+  margin: 0px 50px; /* Marge extérieure de la section */
 }
 
 #competences_section img {
-  width: 10vw;
+  width: 10vw; /* Largeur des images représentant les compétences */
 }
 
+/* Styles pour l'indicateur de défilement (swipe indicator) */
+#swipe_indicator {
+  width: 10%;
+  height: auto;
+  position: absolute;
+  bottom: 10px; /* Ajuste la position verticale selon tes préférences */
+  left: 50%; /* Place le texte indicateur au centre */
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#swipe_indicator img {
+  width: 14%;
+  margin-left: 10px; /* Marge à gauche de l'image */
+}
+
+.rotate-image img {
+  transform: rotateY(180deg); /* Rotation de l'image */
+}
+
+
+
+/* Styles spécifiques pour les écrans de petite taille (max-width: 768px) */
+
 @media (max-width: 768px) {
-  #competences_section {
-    flex-direction: column;
-    padding: 150px 0;
+  
+  #competences_content {
+    display: flex;
+    flex-direction: column !important; /* Force la direction de la colonne pour les écrans étroits */
+    padding: 150px 0; /* Rembourrage pour les écrans étroits */
   }
 
   #competences_section img {
-    width: 30%;
+    width: 50%; /* Ajuste la largeur des images pour les écrans étroits */
+  }
+
+  #swipe_indicator {
+    display: none; /* Cache l'indicateur de défilement pour les écrans étroits */
   }
 }

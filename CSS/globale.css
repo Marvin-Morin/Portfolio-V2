@@ -1,55 +1,60 @@
 ::-webkit-scrollbar {
-    width: 0px;
-  }
-  
+  height: 0px;  /* Hauteur de la barre de défilement invisible */
+  width: 0px;   /* Largeur de la barre de défilement invisible */
+}
 
 body,
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    text-transform: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
+    margin: 0;   /* Réinitialise la marge par défaut */
+    padding: 0;  /* Réinitialise le rembourrage par défaut */
+    text-decoration: none;  /* Supprime la décoration du texte par défaut */
+    text-transform: none;   /* Réinitialise la transformation de texte par défaut */
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;  /* Choix d'une police plus moderne */
+    font-weight: 300;  /* Épaisseur de la police */
 }
 
 body {
-    min-height: 100vh;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    overflow-x: hidden;
+    min-height: 100vh;  /* Définit la hauteur minimale du corps à 100% de la hauteur de la vue */
+    position: absolute;  /* Position absolue par rapport au parent positionnel le plus proche */
+    display: flex;  /* Utilise le modèle de boîte flexible */
+    justify-content: center;  /* Centre le contenu horizontalement */
+    align-items: center;  /* Centre le contenu verticalement */
+    width: 100vw;  /* Définit la largeur à 100% de la largeur de la vue */
+    overflow-x: hidden;  /* Masque tout débordement horizontal */
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    text-align: center;
-    padding: 20px 0;
-    background-image: linear-gradient(to right bottom, #00496e, #293352, #2a2133, #1d131a, #000000);
-    color: white;
+    position: absolute;  /* Position absolue par rapport au parent positionnel le plus proche */
+    bottom: 0;  /* Positionne le bas du pied de page à la base du contenant */
+    width: 100vw;  /* Définit la largeur à 100% de la largeur de la vue */
+    text-align: center;  /* Centre le texte horizontalement dans le pied de page */
+    padding: 20px 0;  /* Ajoute un rembourrage de 20 pixels en haut et en bas */
+    background-color: #000000;  /* Background */
+    color: white;  /* Définit la couleur du texte */
 }
 
 /* Ajoute une classe pour cacher les sections */
 .hidden {
-  display: none;
+  display: none;  /* Masque l'élément avec la classe "hidden" */
 }
 
 /* Ajoute une classe pour afficher les sections */
 .displayed {
-  display: flex;
-  animation: animation_afficher .2s ease-in-out;
+  display: flex;  /* Affiche l'élément avec la classe "displayed" en utilisant le modèle de boîte flexible */
+  animation: animation_afficher .2s ease-in-out;  /* Applique une animation d'affichage de 0,2 seconde avec une accélération en entrée et sortie */
 }
 
+
+
+/* ANIMATION POUR CHAQUE SECTION AU MOMENT DU CLIQUE VERSION MOBILE OU DU SURVOLE EN VERSION PC */
+
 @keyframes animation_afficher {
-  to {
-    opacity: 1;
+  from{
+    opacity: 0;  /* Au début de l'animation, définir l'opacité à 0 pour masquer complètement l'élément */
   }
 
-  from{
-    opacity: 0;
+  to {
+    opacity: 1;  /* À la fin de l'animation, définir l'opacité à 1 pour afficher complètement l'élément */
   }
+
 }

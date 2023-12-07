@@ -1,32 +1,36 @@
-#contact_section {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+#contact_section {  /* Applique un style de disposition en colonne pour les éléments enfants */
+    flex-direction: column;  /* Centre les éléments enfants horizontalement */
+    justify-content: center;  /* Centre les éléments enfants verticalement */
+    align-items: center;  /* Ajoute un espace entre les éléments enfants */
+    gap: 100px;  /* Ajoute un espace intérieur autour du contenu */
     padding: 50px;
 }
 
-#contact_section p {
+#contact_section p {  /* Centre le texte horizontalement */
     text-align: center;
 }
 
-#contact_section a {
+#contact_section a {  /* Souligne le texte au survol, réinitialise la transformation de texte et définit la couleur */
     text-decoration: underline;
     text-transform: none;
     color: #00496e;
 }
 
-#contact_section img {
+#contact_section a:hover {  /* Change la couleur du texte au survol */
+    color: #000000;
+}
+
+#contact_section img {  /* Ajoute une transition fluide pour tous les attributs, initialise l'échelle à 1 */
     transition: .3s all ease-out;
     transform: scale(1);
 }
 
-#contact_section img:hover {
-    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.596));
+#contact_section img:hover {  /* Ajoute une transition fluide et agrandit l'image au survol */
     transition: .3s all ease-out;
     transform: scale(1.2);
 }
 
-#contact_section a:hover {
-    color: #000000;
+#reseaux_section {  /* Affiche les éléments enfants en ligne avec un espace entre eux */
+    display: flex;
+    gap: 20px;
 }

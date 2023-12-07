@@ -1,125 +1,165 @@
-::-webkit-scrollbar {
-    height: 5px;
+#projets_section {
+    position: relative; /* Position relative pour la section des projets */
+    overflow-x: scroll; /* Activation du défilement horizontal */
+    scroll-behavior: smooth; /* Comportement de défilement fluide */
+    width: 100vw; /* Largeur équivalente à celle du viewport */
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(215, 215, 215);
-    border-radius: 50px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
-}
-
-/* ANNIMATION MODALE */
-@keyframes animation_modale {
-    from{transform: translate(-100%, -50%);}
-    to{transform: translate(-50%, -50%);}
-}
-
 
 #img_section {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    width: 80vw;
-    scroll-behavior: smooth;
-    overflow-x: auto;
+    position: relative; /* Position relative pour la section des images */
+    display: flex; /* Conteneur flex pour aligner les éléments */
+    flex-wrap: nowrap; /* Empêcher le retour à la ligne des éléments flex */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    gap: 50px; /* Espacement entre les éléments flex */
+    padding: 100px; /* Remplissage autour de la section des images */
+    margin: 0px 50px; /* Marge autour de la section des images */
 }
 
 #img_section .imageprojet {
-    position: relative;
-    width: 15vw;
-    height: auto;
-    border-radius: 5px;
-    border: 1px solid black;
-    background-color: #000000;
-    margin: 10px 20px;
-    cursor: pointer;
+    position: relative; /* Position relative pour l'image individuelle */
+    width: 15vw; /* Largeur de l'image équivalente à 15% de la largeur du viewport */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    border-radius: 5px; /* Bordure arrondie de 5 pixels */
+    border: 1px solid rgb(0, 0, 0); /* Bordure d'épaisseur 1 pixel et de couleur noire */
+    background-color: #00496e; /* Couleur de fond noire */
+    margin: 10px 20px; /* Marge autour de chaque image */
+    cursor: pointer; /* Curseur pointeur au survol de l'image */
+}
+
+#swipe_indicator_projets {
+    width: 10%; /* Largeur de l'indicateur de balayage équivalente à 10% de la largeur du viewport */
+    height: auto; /* Hauteur automatique */
+    position: absolute; /* Position absolue par rapport à l'élément positionnel le plus proche */
+    bottom: 10px; /* Position à 10 pixels du bas */
+    left: 50%; /* Position à 50% du bord gauche */
+    transform: translateX(-50%); /* Centrer horizontalement en ajustant de -50% de la propre largeur */
+    font-size: 14px; /* Taille de police de 14 pixels */
+    color: #666; /* Couleur de texte gris foncé */
+    display: flex; /* Conteneur flex pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    cursor: pointer; /* Curseur pointeur au survol */
+}
+
+
+#swipe_indicator_projets {
+    width: 10%; /* Largeur de l'indicateur de balayage équivalente à 10% de la largeur du viewport */
+    height: auto; /* Hauteur automatique */
+    position: absolute; /* Position absolue par rapport à l'élément positionnel le plus proche */
+    bottom: 10px; /* Position à 10 pixels du bas */
+    left: 50%; /* Position à 50% du bord gauche */
+    transform: translateX(-50%); /* Centrer horizontalement en ajustant de -50% de la propre largeur */
+    font-size: 14px; /* Taille de police de 14 pixels */
+    color: #666; /* Couleur de texte gris foncé */
+    display: flex; /* Conteneur flex pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    cursor: pointer; /* Curseur pointeur au survol */
+}
+
+#swipe_indicator_projets img {
+    width: 14%; /* Largeur de l'image équivalente à 14% de la largeur du parent */
+    margin-left: 10px; /* Marge à gauche de 10 pixels */
+}
+
+
+
+/* MODALE */
+
+@keyframes fade_in {
+    from {
+        opacity: 0; /* Opacité initiale de 0 pour la transition d'entrée */
+        transform: translate(-50%, -50%) scale(0.8); /* Position initiale et mise à l'échelle */
+    }
+    to {
+        opacity: 1; /* Opacité finale de 1 pour la transition d'entrée */
+        transform: translate(0%, -50%) scale(1); /* Position finale et mise à l'échelle */
+    }
 }
 
 .modale {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 70%;
-    height: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-image: linear-gradient(to right bottom, #00496e, #293352, #2a2133, #1d131a, #000000);
-    border-radius: 10px;
-    z-index: 5;
-    color: white;
+    position: absolute; /* Position absolue par rapport à l'élément positionnel le plus proche */
+    display: flex; /* Conteneur flex pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    flex-direction: column; /* Orientation des enfants en colonne */
+    width: 70%; /* Largeur de la modale équivalente à 70% du parent */
+    height: 50%; /* Hauteur de la modale équivalente à 50% du parent */
+    top: 50%; /* Position verticale à 50% du parent */
+    left: 50%; /* Position horizontale à 50% du parent */
+    transform: translate(-50%, -50%); /* Centrer horizontalement et verticalement */
+    padding: 20px; /* Remplissage de 20 pixels à l'intérieur de la modale */
+    background-color: #000000;  /* Background */
+    box-shadow: 0 0 20px #000000;  /* Ajoute une ombre pour donner l'effet 3D */
+    border-radius: 10px; /* Bordure arrondie de 10 pixels */
+    z-index: 5; /* Z-index de 5 pour la gestion de la superposition */
+    color: white; /* Couleur du texte blanc */
+    opacity: 0; /* Opacité initiale de 0 pour la transition d'entrée */
 }
-
-.modale img {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
 
 .open {
-    display: flex;
-    animation: animation_modale .3s ease-in;
+    display: flex; /* Affichage en tant que conteneur flex lorsqu'ouverte */
+    animation: fade_in 0.3s ease-in forwards; /* Animation fade_in de 0.3s avec accélération, maintient l'état final */
 }
 
 .close {
-    display: none;
+    display: none; /* Cachée par défaut lorsqu'elle est fermée */
+}
+
+.modale img {
+    position: absolute; /* Position absolue pour les images dans la modale */
+    top: 10px; /* Distance de 10 pixels depuis le haut */
+    right: 10px; /* Distance de 10 pixels depuis la droite */
+    cursor: pointer; /* Curseur pointeur au survol */
 }
 
 .modale a {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
-    transition: .3s all ease-in;
-    transform: scale(1);
+    background-color: #ffffff; /* Couleur de fond noire pour les liens */
+    color: rgb(0, 0, 0); /* Couleur du texte blanc pour les liens */
+    padding: 20px; /* Remplissage de 20 pixels autour des liens */
+    border-radius: 10px; /* Bordure arrondie de 10 pixels pour les liens */
+    margin-top: 30px; /* Marge de 30 pixels en haut des liens */
+    transition: .3s all ease-in; /* Transition de 0.3s avec facilité d'entrée pour les liens */
+    transform: scale(1); /* Mise à l'échelle initiale de 1 pour les liens */
 }
 
 .modale a:hover {
-    transition: .3s all ease-out;
-    background-color: #fff;
-    color: black;
-    transform: scale(1.1);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.605);
+    transition: .3s all ease-out; /* Transition de 0.3s avec facilité de sortie au survol des liens */
+    background-color: #000000; /* Couleur de fond blanche pour les liens au survol */
+    color: rgb(255, 255, 255); /* Couleur du texte noir pour les liens au survol */
+    transform: scale(1.1); /* Mise à l'échelle de 1.1 pour les liens au survol */
+    box-shadow: 0 0 20px #ffffff90; /* Ombre portée légère pour les liens au survol */
 }
 
 
-@media (max-width: 768px) {
 
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
     .modale {
-        position: fixed;
-        height: auto;
+        position: fixed; /* Position fixe pour la modale sur des écrans plus petits */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
     }
 
     .modale p {
-        text-align: center;
-        margin: 50px auto 10px auto;
+        text-align: center; /* Centrer le texte à l'intérieur de la modale sur des écrans plus petits */
+        margin: 50px auto 10px auto; /* Marge autour du texte à l'intérieur de la modale sur des écrans plus petits */
     }
 
     #img_section {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 120px 0px 100px 0px;
+        justify-content: center; /* Centrer les images horizontalement sur des écrans plus petits */
+        align-items: center; /* Centrer les images verticalement sur des écrans plus petits */
+        flex-direction: column; /* Orientation des enfants en colonne sur des écrans plus petits */
+        padding: 120px 0px 100px 0px; /* Ajuster le remplissage sur des écrans plus petits */
     }
 
     #img_section .imageprojet {
-        width: 50%;
-        height: auto;
+        width: 50%; /* Largeur des images équivalente à 50% sur des écrans plus petits */
+        height: auto; /* Hauteur automatique pour maintenir les proportions sur des écrans plus petits */
+    }
+
+    #swipe_indicator_projets {
+        display: none; /* Cacher l'indicateur de balayage sur des écrans plus petits */
     }
 }
